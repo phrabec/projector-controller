@@ -25,4 +25,5 @@ func init() {
 	rootCmd.AddCommand(shutterCmd)
 	rootCmd.AddCommand(inputCmd)
 	rootCmd.AddCommand(aspectCmd)
+	rootCmd.AddCommand(customCmd)
 }
