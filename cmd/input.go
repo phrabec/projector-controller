@@ -6,7 +6,10 @@ import (
 
 var inputCmd = &cobra.Command{
 	Use:   "input",
-	Short: "Set input configutation",
+	Short: "Get or set input configutation",
+	RunE: func(cmd *cobra.Command, args []string) error {
+		return communicate(device, projectorId, kCommandInputSignalStatus, kParamsNone)
+	},
 }
 
 var inputDigitalLinkCmd = &cobra.Command{
