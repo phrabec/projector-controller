@@ -9,10 +9,10 @@ var customCmd = &cobra.Command{
 	Short: "Send custom command to projector",
 	Args:  cobra.RangeArgs(1, 2),
 	RunE: func(cmd *cobra.Command, args []string) error {
-		params := kParamsNone
+		params := paramsNone
 		if len(args) > 1 {
 			params = args[1]
 		}
-		return communicate(device, projectorId, args[0], params)
+		return communicate(device, projectorID, args[0], params)
 	},
 }

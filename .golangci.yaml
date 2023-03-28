@@ -1,0 +1,23 @@
+linters:
+  disable-all: true
+  enable:
+  - errcheck
+  - gci
+  - gofmt
+  - gofumpt
+  - gosec
+  - gosimple
+  - govet
+  - ineffassign
+  - revive
+  - staticcheck
+  - typecheck
+  - unused
+  - whitespace
+
+#linters-settings:
+#  revive:
+#    enable-all-rules: true
+#    rules:
+#    - name: var-naming
+#      disabled: true

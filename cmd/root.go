@@ -10,7 +10,7 @@ var rootCmd = &cobra.Command{
 
 var (
 	device      string
-	projectorId string
+	projectorID string
 )
 
 func Execute() error {
@@ -19,7 +19,7 @@ func Execute() error {
 
 func init() {
 	rootCmd.PersistentFlags().StringVar(&device, "device", "/dev/ttyUSB0", "Serial port device")
-	rootCmd.PersistentFlags().StringVar(&projectorId, "projector-id", kIdAll, "Target projector ID")
+	rootCmd.PersistentFlags().StringVar(&projectorID, "projector-id", idAll, "Target projector ID")
 
 	rootCmd.AddCommand(powerCmd)
 	rootCmd.AddCommand(shutterCmd)
