@@ -6,7 +6,7 @@ import (
 
 var inputCmd = &cobra.Command{
 	Use:   "input",
-	Short: "Get or set input configutation",
+	Short: "Get or set input configuration",
 	RunE: func(cmd *cobra.Command, args []string) error {
 		return communicate(device, projectorID, commandInputSignalStatus, paramsNone)
 	},
