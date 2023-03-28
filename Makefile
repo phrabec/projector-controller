@@ -1,14 +1,14 @@
 BINARY_NAME=projector-controller
 
+all: test build
+
+test:
+	go test -race -v ./...
+
 build:
-	GOARCH=arm GOARM=7 GOOS=linux go build -o bin/${BINARY_NAME}-rpi main.go
-	GOARCH=amd64 GOOS=linux go build -o bin/${BINARY_NAME}-linux main.go
-	GOARCH=amd64 GOOS=windows go build -o bin/${BINARY_NAME}.exe main.go
-	GOARCH=arm64 GOOS=darwin go build -o bin/${BINARY_NAME}-macos main.go
+	goreleaser build --snapshot --clean
 
 clean:
-	go clean
-	rm bin/*
+	rm -rf dist
 
-vet:
-	go vet
+.PHONY: all
