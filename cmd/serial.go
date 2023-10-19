@@ -106,7 +106,13 @@ func communicate(portName string, id string, cmd string, params string) error {
 		}
 	}
 
-	fmt.Printf("Result: %v\n", string(result[1:len(result)-1]))
+	length := len(result)
+	if length < 2 {
+		return fmt.Errorf("unexpected response (len %d): '%v'", length, result)
+	}
+
+	text := string(result[1 : length-1]) //nolint:gosec
+	fmt.Printf("Result: %v\n", text)
 
 	return nil
 }
