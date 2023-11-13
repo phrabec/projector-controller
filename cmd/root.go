@@ -26,4 +26,5 @@ func init() {
 	rootCmd.AddCommand(inputCmd)
 	rootCmd.AddCommand(aspectCmd)
 	rootCmd.AddCommand(customCmd)
+	rootCmd.AddCommand(serialCmd)
 }
