@@ -7,7 +7,7 @@ import (
 var shutterCmd = &cobra.Command{
 	Use:   "shutter",
 	Short: "Get or set shutter state",
-	RunE: func(cmd *cobra.Command, args []string) error {
+	RunE: func(_ *cobra.Command, _ []string) error {
 		return communicate(device, projectorID, commandShutterStatus, paramsNone)
 	},
 }
@@ -15,7 +15,7 @@ var shutterCmd = &cobra.Command{
 var shutterOnCmd = &cobra.Command{
 	Use:   "open",
 	Short: "Open shutter",
-	RunE: func(cmd *cobra.Command, args []string) error {
+	RunE: func(_ *cobra.Command, _ []string) error {
 		return communicate(device, projectorID, commandShutter, paramsShutterOn)
 	},
 }
@@ -23,7 +23,7 @@ var shutterOnCmd = &cobra.Command{
 var shutterOffCmd = &cobra.Command{
 	Use:   "close",
 	Short: "Close shutter",
-	RunE: func(cmd *cobra.Command, args []string) error {
+	RunE: func(_ *cobra.Command, _ []string) error {
 		return communicate(device, projectorID, commandShutter, paramsShutterOff)
 	},
 }

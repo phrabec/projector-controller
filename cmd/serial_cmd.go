@@ -15,7 +15,7 @@ var serialCmd = &cobra.Command{
 var listPortsCmd = &cobra.Command{
 	Use:   "list",
 	Short: "List available serial ports",
-	RunE: func(cmd *cobra.Command, args []string) error {
+	RunE: func(_ *cobra.Command, _ []string) error {
 		ports, err := serial.GetPortsList()
 		if err != nil {
 			return err

@@ -7,7 +7,7 @@ import (
 var powerCmd = &cobra.Command{
 	Use:   "power",
 	Short: "Get or set power state",
-	RunE: func(cmd *cobra.Command, args []string) error {
+	RunE: func(_ *cobra.Command, _ []string) error {
 		return communicate(device, projectorID, commandMainPowerStatus, paramsNone)
 	},
 }
@@ -15,7 +15,7 @@ var powerCmd = &cobra.Command{
 var powerOnCmd = &cobra.Command{
 	Use:   "on",
 	Short: "Power on projector",
-	RunE: func(cmd *cobra.Command, args []string) error {
+	RunE: func(_ *cobra.Command, _ []string) error {
 		return communicate(device, projectorID, commandPowerOn, paramsNone)
 	},
 }
@@ -23,7 +23,7 @@ var powerOnCmd = &cobra.Command{
 var powerOffCmd = &cobra.Command{
 	Use:   "off",
 	Short: "Power off projector",
-	RunE: func(cmd *cobra.Command, args []string) error {
+	RunE: func(_ *cobra.Command, _ []string) error {
 		return communicate(device, projectorID, commandPowerOff, paramsNone)
 	},
 }

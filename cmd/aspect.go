@@ -7,7 +7,7 @@ import (
 var aspectCmd = &cobra.Command{
 	Use:   "aspect",
 	Short: "Get or set aspect ratio",
-	RunE: func(cmd *cobra.Command, args []string) error {
+	RunE: func(_ *cobra.Command, _ []string) error {
 		return communicate(device, projectorID, commandAspectModeStatus, paramsNone)
 	},
 }
@@ -15,7 +15,7 @@ var aspectCmd = &cobra.Command{
 var aspectAutoCmd = &cobra.Command{
 	Use:   "auto",
 	Short: "Set aspect ratio to auto",
-	RunE: func(cmd *cobra.Command, args []string) error {
+	RunE: func(_ *cobra.Command, _ []string) error {
 		return communicate(device, projectorID, commandAspect, paramsAspectAuto)
 	},
 }
@@ -23,7 +23,7 @@ var aspectAutoCmd = &cobra.Command{
 var aspect43Cmd = &cobra.Command{
 	Use:   "43",
 	Short: "Set aspect ratio to 4:3",
-	RunE: func(cmd *cobra.Command, args []string) error {
+	RunE: func(_ *cobra.Command, _ []string) error {
 		return communicate(device, projectorID, commandAspect, paramsAspect43)
 	},
 }
@@ -31,7 +31,7 @@ var aspect43Cmd = &cobra.Command{
 var aspectWideCmd = &cobra.Command{
 	Use:   "wide",
 	Short: "Set aspect ratio to wide",
-	RunE: func(cmd *cobra.Command, args []string) error {
+	RunE: func(_ *cobra.Command, _ []string) error {
 		return communicate(device, projectorID, commandAspect, paramsAspectWide)
 	},
 }
@@ -39,7 +39,7 @@ var aspectWideCmd = &cobra.Command{
 var aspectRealCmd = &cobra.Command{
 	Use:   "real",
 	Short: "Set aspect ratio to real",
-	RunE: func(cmd *cobra.Command, args []string) error {
+	RunE: func(_ *cobra.Command, _ []string) error {
 		return communicate(device, projectorID, commandAspect, paramsAspectReal)
 	},
 }
@@ -47,7 +47,7 @@ var aspectRealCmd = &cobra.Command{
 var aspectFullCmd = &cobra.Command{
 	Use:   "full",
 	Short: "Set aspect ratio to full",
-	RunE: func(cmd *cobra.Command, args []string) error {
+	RunE: func(_ *cobra.Command, _ []string) error {
 		return communicate(device, projectorID, commandAspect, paramsAspectFull)
 	},
 }
@@ -55,7 +55,7 @@ var aspectFullCmd = &cobra.Command{
 var aspectHorizontalFitCmd = &cobra.Command{
 	Use:   "h-fit",
 	Short: "Set aspect ratio to horizontal fit",
-	RunE: func(cmd *cobra.Command, args []string) error {
+	RunE: func(_ *cobra.Command, _ []string) error {
 		return communicate(device, projectorID, commandAspect, paramsAspectHFit)
 	},
 }
@@ -63,7 +63,7 @@ var aspectHorizontalFitCmd = &cobra.Command{
 var aspectVerticalFitCmd = &cobra.Command{
 	Use:   "v-fit",
 	Short: "Set aspect ratio to vertical fit",
-	RunE: func(cmd *cobra.Command, args []string) error {
+	RunE: func(_ *cobra.Command, _ []string) error {
 		return communicate(device, projectorID, commandAspect, paramsAspectVFit)
 	},
 }

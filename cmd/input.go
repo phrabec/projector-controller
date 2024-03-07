@@ -7,7 +7,7 @@ import (
 var inputCmd = &cobra.Command{
 	Use:   "input",
 	Short: "Get or set input configuration",
-	RunE: func(cmd *cobra.Command, args []string) error {
+	RunE: func(_ *cobra.Command, _ []string) error {
 		return communicate(device, projectorID, commandInputSignalStatus, paramsNone)
 	},
 }
@@ -15,7 +15,7 @@ var inputCmd = &cobra.Command{
 var inputDigitalLinkCmd = &cobra.Command{
 	Use:   "digital-link",
 	Short: "Set input to DigitalLink",
-	RunE: func(cmd *cobra.Command, args []string) error {
+	RunE: func(_ *cobra.Command, _ []string) error {
 		return communicate(device, projectorID, commandInputSelection, paramsDigitalLink)
 	},
 }
@@ -23,7 +23,7 @@ var inputDigitalLinkCmd = &cobra.Command{
 var inputDisplaPort = &cobra.Command{
 	Use:   "display-port",
 	Short: "Set input to DisplayPort",
-	RunE: func(cmd *cobra.Command, args []string) error {
+	RunE: func(_ *cobra.Command, _ []string) error {
 		return communicate(device, projectorID, commandInputSelection, paramsDisplayPort)
 	},
 }
@@ -31,7 +31,7 @@ var inputDisplaPort = &cobra.Command{
 var inputHdmiCmd = &cobra.Command{
 	Use:   "hdmi",
 	Short: "Set input to HDMI",
-	RunE: func(cmd *cobra.Command, args []string) error {
+	RunE: func(_ *cobra.Command, _ []string) error {
 		return communicate(device, projectorID, commandInputSelection, paramsHdmi)
 	},
 }
@@ -39,7 +39,7 @@ var inputHdmiCmd = &cobra.Command{
 var inputDviCmd = &cobra.Command{
 	Use:   "dvi",
 	Short: "Set input to DVI-D",
-	RunE: func(cmd *cobra.Command, args []string) error {
+	RunE: func(_ *cobra.Command, _ []string) error {
 		return communicate(device, projectorID, commandInputSelection, paramsDvi)
 	},
 }
@@ -47,7 +47,7 @@ var inputDviCmd = &cobra.Command{
 var inputRgb1Cmd = &cobra.Command{
 	Use:   "rgb1",
 	Short: "Set input to RGB 1",
-	RunE: func(cmd *cobra.Command, args []string) error {
+	RunE: func(_ *cobra.Command, _ []string) error {
 		return communicate(device, projectorID, commandInputSelection, paramsRgb1)
 	},
 }
@@ -55,7 +55,7 @@ var inputRgb1Cmd = &cobra.Command{
 var inputRgb2Cmd = &cobra.Command{
 	Use:   "rgb2",
 	Short: "Set input to RGB 2",
-	RunE: func(cmd *cobra.Command, args []string) error {
+	RunE: func(_ *cobra.Command, _ []string) error {
 		return communicate(device, projectorID, commandInputSelection, paramsRgb2)
 	},
 }
@@ -63,7 +63,7 @@ var inputRgb2Cmd = &cobra.Command{
 var inputVideoCmd = &cobra.Command{
 	Use:   "video",
 	Short: "Set input to Video",
-	RunE: func(cmd *cobra.Command, args []string) error {
+	RunE: func(_ *cobra.Command, _ []string) error {
 		return communicate(device, projectorID, commandInputSelection, paramsVideo)
 	},
 }
