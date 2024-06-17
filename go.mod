@@ -3,7 +3,7 @@ module github.com/phrabec/projector-controller
 go 1.21
 
 require (
-	github.com/spf13/cobra v1.8.0
+	github.com/spf13/cobra v1.8.1
 	go.bug.st/serial v1.6.2
 )
 
