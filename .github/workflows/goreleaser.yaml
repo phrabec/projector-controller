@@ -1,12 +1,15 @@
-name: goreleaser
+name: Release
+
 on:
   push:
     tags:
       - v*
+
 permissions:
   contents: write
+
 jobs:
-  goreleaser:
+  release:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -18,7 +21,7 @@ jobs:
         with:
           go-version-file: 'go.mod'
       - name: Run GoReleaser
-        uses: goreleaser/goreleaser-action@v5
+        uses: goreleaser/goreleaser-action@v6
         with:
           version: latest
           args: release --clean
