@@ -4,7 +4,7 @@ go 1.23
 
 require (
 	github.com/spf13/cobra v1.9.1
-	go.bug.st/serial v1.6.2
+	go.bug.st/serial v1.6.3
 )
 
 require (
