@@ -4,7 +4,7 @@ go 1.26.0
 
 require (
 	github.com/spf13/cobra v1.10.2
-	go.bug.st/serial v1.7.0
+	go.bug.st/serial v1.7.1
 )
 
 require (
